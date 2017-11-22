@@ -1,0 +1,13 @@
+
+
+文件夹中导入到maven
+<dependency> 
+　　<groupId></groupId> 
+　　<artifactId></artifactId> 
+　　<version></version> 
+　　<scope>system</scope> 
+　　<systemPath>${project.basedir}/lib/路径</systemPath> 
+</dependency>
+
+将JAR包导入到本地库中（在jar包所在文件夹中打开命令行）
+mvn install:install-file -Dfile=jar包名  -DgroupId=    -DartifactId=       -Dversion=       -Dpackaging=jar

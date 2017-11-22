@@ -1,0 +1,150 @@
+
+lucifer@anyulong MINGW64 /
+$ cd /e/works/studyspace
+bash: cd: /e/works/studyspace: No such file or directory
+
+lucifer@anyulong MINGW64 /
+$ cd /e/works/studyspace
+
+lucifer@anyulong MINGW64 /e/works/studyspace
+$ mkdir samplerepo
+
+lucifer@anyulong MINGW64 /e/works/studyspace
+$ cd samplerepo/
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo
+$ git init
+Initialized empty Git repository in E:/works/studyspace/samplerepo/.git/
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ ls
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ cd samplerepo/
+bash: cd: samplerepo/: No such file or directory
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ pwd
+/e/works/studyspace/samplerepo
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git init
+Reinitialized existing Git repository in E:/works/studyspace/samplerepo/.git/
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ ls
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ pwd
+/e/works/studyspace/samplerepo
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ cd README.txt
+bash: cd: README.txt: No such file or directory
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ mkdir README.txt
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ vi a.txt
+
+[1]+  Stopped                 vi a.txt
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .a.txt.swp
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ vi ab.txt
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git add .
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git commit -m "first readme file."
+[master (root-commit) bf23173] first readme file.
+ Committer: unknown <°²ÓñÁú>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.txt
+ create mode 100644 ab.txt
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git config --global user.name "anyulong"
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git config --global user.email "1339918614@qq.com"
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git commit -m "first readme file."
+On branch master
+nothing to commit, working tree clean
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git add .
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git commit -m "first readme file."
+[master 85d3193] first readme file.
+ 1 file changed, 1 insertion(+)
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git log
+commit 85d3193d97eb096e6a4e1ee342040ec6a22918b3
+Author: anyulong <1339918614@qq.com>
+Date:   Tue Nov 21 11:30:24 2017 +0800
+
+    first readme file.
+
+commit bf23173d978d06a777e134be4df9c30162c3ea1c
+Author: unknown <°²ÓñÁú>
+Date:   Tue Nov 21 11:25:53 2017 +0800
+
+    first readme file.
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git reset HEAD^
+Unstaged changes after reset:
+M       ab.txt
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git reset --hard
+HEAD is now at bf23173 first readme file.
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$  git remote add origin https://github.com/anyulong/an.git
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 225 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/anyulong/an.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+lucifer@anyulong MINGW64 /e/works/studyspace/samplerepo (master)
+$ git remote add origin
