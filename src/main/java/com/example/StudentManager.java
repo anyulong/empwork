@@ -49,7 +49,7 @@ public class StudentManager {
 	//打印学生
 	public static List<Student> printStudent(int score,List<Student> students) {
 		
-		List<Student> scoreStudent = checkStudent(students, s->s.getScore()==85);
+		List<Student> scoreStudent = checkStudent(students, s->s.getScore()==score);
 		System.out.println("成绩为"+score+"的学生有"+checkStudent(students, s->s.getScore()==score).size()+"人。分别是：");
 		System.out.println(scoreStudent);
 		return scoreStudent;
